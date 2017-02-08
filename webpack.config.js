@@ -15,7 +15,7 @@ module.exports = {
     },
     output: {
         filename: "ignored",
-        path: path.join(__dirname, "build"),
+        path: __dirname,
     },
     resolve: {
         extensions: [".scss", ".js"]

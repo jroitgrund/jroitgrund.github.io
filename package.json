@@ -21,7 +21,7 @@
   },
   "scripts": {
     "build": "NODE_ENV=production webpack -p && ./remove-script-tag.sh",
-    "clean": "rimraf build",
+    "clean": "rimraf index.html && rimraf *.css && rimraf ignored",
     "dev": "webpack-dev-server --hot --config webpack.config.devserver.js",
     "prebuild": "npm run clean"
   }

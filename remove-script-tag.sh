@@ -4,4 +4,4 @@ set -ex
 
 cd "$(dirname "$0")"
 
-sed -i "" 's:<script.*</script>::g' build/index.html
+sed --in-place="" 's:<script.*</script>::g' index.html
