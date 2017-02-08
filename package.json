@@ -1,0 +1,28 @@
+{
+  "name": "roitgrund.me",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:jroitgrund/roitgrund.me.git",
+  "author": "Jonathan Roitgrund <jroitgrund@palantir.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^6.7.2",
+    "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "next",
+    "html-webpack-plugin": "^2.28.0",
+    "node-sass": "^4.5.0",
+    "normalize.css": "^5.0.0",
+    "postcss-loader": "^1.2.2",
+    "rimraf": "^2.5.4",
+    "sass-loader": "^5.0.1",
+    "style-loader": "^0.13.1",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.3.0"
+  },
+  "scripts": {
+    "build": "NODE_ENV=production webpack -p && ./remove-script-tag.sh",
+    "clean": "rimraf build",
+    "dev": "webpack-dev-server --hot --config webpack.config.devserver.js",
+    "prebuild": "npm run clean"
+  }
+}
