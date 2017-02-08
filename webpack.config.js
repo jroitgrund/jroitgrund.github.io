@@ -10,7 +10,6 @@ const extractSass = new ExtractTextPlugin({
 });
 
 module.exports = {
-    devtool: "inline-sourcemap",
     entry: {
         style: "./src/style.scss",
     },
@@ -51,7 +50,7 @@ module.exports = {
                 "removeScriptTypeAttributes": true,
                 "removeStyleTypeAttributes": true,
             },
-            template: 'src/index.html',
+            template: "src/index.html",
             chunks: ["style"],
         }),
         extractSass
