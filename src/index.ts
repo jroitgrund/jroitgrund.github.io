@@ -1,3 +1,1 @@
-require("./style.scss");
-
-console.log("foo");
+require("./style");

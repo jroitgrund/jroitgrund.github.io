@@ -18,7 +18,7 @@ module.exports = {
         path: __dirname,
     },
     resolve: {
-        extensions: [".scss", ".ts"]
+        extensions: [".scss", ".ts", ".js"]
     },
     devServer: {
         inline: true,
@@ -31,6 +31,8 @@ module.exports = {
                     use: ["css-loader?sourceMap=true", "postcss-loader", "sass-loader?sourceMap=true"],
                     fallback: "style-loader"
                 }),
+            },
+            {
                 test: /\.ts$/,
                 use: ["ts-loader", "tslint-loader"]
             }
