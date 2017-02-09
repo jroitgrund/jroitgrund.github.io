@@ -12,5 +12,6 @@ git checkout master
 git reset --hard develop
 yarn install
 yarn run build
-git commit -am "Deploy to GitHub pages"
+git add .
+git commit -m "Deploy to GitHub pages"
 git push
