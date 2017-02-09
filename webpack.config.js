@@ -9,6 +9,21 @@ const extractSass = new ExtractTextPlugin({
     disable: process.env.NODE_ENV !== "production",
 });
 
+const minify = {
+    "removeComments": true,
+    "removeCommentsFromCDATA": true,
+    "removeCDATASectionsFromCDATA": true,
+    "collapseWhitespace": true,
+    "conservativeCollapse": true,
+    "removeAttributeQuotes": true,
+    "useShortDoctype": true,
+    "keepClosingSlash": true,
+    "minifyJS": true,
+    "minifyCSS": true,
+    "removeScriptTypeAttributes": true,
+    "removeStyleTypeAttributes": true,
+}
+
 module.exports = {
     entry: {
         index: "./src/index.ts"
@@ -40,21 +55,14 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            minify: {
-                "removeComments": true,
-                "removeCommentsFromCDATA": true,
-                "removeCDATASectionsFromCDATA": true,
-                "collapseWhitespace": true,
-                "conservativeCollapse": true,
-                "removeAttributeQuotes": true,
-                "useShortDoctype": true,
-                "keepClosingSlash": true,
-                "minifyJS": true,
-                "minifyCSS": true,
-                "removeScriptTypeAttributes": true,
-                "removeStyleTypeAttributes": true,
-            },
+            minify,
             template: "src/index.html",
+            chunks: ["index"],
+        }),
+        new HtmlWebpackPlugin({
+            minify,
+            filename: "404/index.html",
+            template: "src/404.html",
             chunks: ["index"],
         }),
         extractSass
