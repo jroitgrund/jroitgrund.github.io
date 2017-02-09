@@ -6,6 +6,7 @@
   "author": "Jonathan Roitgrund <jroitgrund@palantir.com>",
   "license": "MIT",
   "devDependencies": {
+    "@types/node": "^7.0.5",
     "autoprefixer": "^6.7.2",
     "css-loader": "^0.26.1",
     "extract-text-webpack-plugin": "next",
@@ -16,6 +17,10 @@
     "rimraf": "^2.5.4",
     "sass-loader": "^5.0.1",
     "style-loader": "^0.13.1",
+    "ts-loader": "^2.0.0",
+    "tslint": "^4.4.2",
+    "tslint-loader": "^3.3.0",
+    "typescript": "^2.1.6",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.3.0"
   },

@@ -11,14 +11,14 @@ const extractSass = new ExtractTextPlugin({
 
 module.exports = {
     entry: {
-        style: "./src/style.scss",
+        index: "./src/index.ts"
     },
     output: {
-        filename: "ignored",
+        filename: "[name].js",
         path: __dirname,
     },
     resolve: {
-        extensions: [".scss", ".js"]
+        extensions: [".scss", ".ts"]
     },
     devServer: {
         inline: true,
@@ -31,6 +31,8 @@ module.exports = {
                     use: ["css-loader?sourceMap=true", "postcss-loader", "sass-loader?sourceMap=true"],
                     fallback: "style-loader"
                 }),
+                test: /\.ts$/,
+                use: ["ts-loader", "tslint-loader"]
             }
         ]
     },
@@ -51,7 +53,7 @@ module.exports = {
                 "removeStyleTypeAttributes": true,
             },
             template: "src/index.html",
-            chunks: ["style"],
+            chunks: ["index"],
         }),
         extractSass
     ],
