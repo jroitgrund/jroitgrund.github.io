@@ -1,0 +1,21 @@
+machine:
+  node:
+    version: 6.1.0
+  environment:
+    PATH: "${PATH}:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin"
+
+dependencies:
+  override:
+    - yarn install --pure-lockfile
+  cache_directories:
+    - ~/.cache/yarn
+
+test:
+  override:
+    - yarn build
+
+deployment:
+  github-pages:
+    branch: develop
+    commands:
+      - ./deploy-github.sh
