@@ -1,17 +1,24 @@
 @import '~normalize.css';
-@import url('https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans');
 
 $line-height: 1.15em;
 $horizontal-padding: 1rem;
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: sans-serif;
+}
+
+html.wf-inactive body {
+  font-family: 'Open Sans' sans-serif;
 }
 
 body.hacked {
-  font-family: 'Inconsolata', monospace;
+  font-family: monospace;
   color: #00ff00;
   background-color: black;
+}
+
+html.wf-inactive body.hacked {
+  font-family: 'Inconsolata' monospace;
 }
 
 header {

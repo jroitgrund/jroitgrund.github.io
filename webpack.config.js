@@ -3,6 +3,7 @@ const webpack = require("webpack");
 
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const ScriptExtHtmlWebpackPlugin = require("script-ext-html-webpack-plugin");
 
 const extractSass = new ExtractTextPlugin({
     filename: "[name].[contenthash].css",
@@ -25,8 +26,9 @@ const minify = {
 }
 
 module.exports = {
+    bail: true,
     entry: {
-        index: "./src/index.ts"
+        index: "./src/index.ts",
     },
     output: {
         filename: "[name].js",
@@ -41,12 +43,16 @@ module.exports = {
     module: {
         loaders: [
             {
-                test: /\.scss$/,
+                test: /style\.scss$/,
                 use: extractSass.extract({
                     use: ["css-loader?sourceMap=true", "postcss-loader", "sass-loader?sourceMap=true"],
                     fallback: "style-loader"
                 }),
             },
+            // {
+            //     test: /fonts\.scss$/,
+            //     use: ["style-loader", "css-loader"],
+            // },
             {
                 test: /\.ts$/,
                 use: ["ts-loader", "tslint-loader"]
@@ -64,6 +70,9 @@ module.exports = {
             filename: "404/index.html",
             template: "src/404.html",
             chunks: ["index"],
+        }),
+        new ScriptExtHtmlWebpackPlugin({
+            defaultAttribute: 'async'
         }),
         extractSass
     ],

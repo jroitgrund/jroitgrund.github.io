@@ -6,6 +6,10 @@
   version "7.0.5"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-7.0.5.tgz#96a0f0a618b7b606f1ec547403c00650210bfbb7"
 
+"@types/webfontloader@^1.6.28":
+  version "1.6.28"
+  resolved "https://registry.yarnpkg.com/@types/webfontloader/-/webfontloader-1.6.28.tgz#48471eafa6ba3da26aeaf79be61c272058a13d27"
+
 abbrev@1:
   version "1.0.9"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.0.9.tgz#91b4792588a7738c25f35dd6f63752a2f8776135"
@@ -809,6 +813,12 @@ debug@^2.2.0, debug@~2.2.0:
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.2.0.tgz#f87057e995b1a1f6ae6a4960664137bc56f039da"
   dependencies:
     ms "0.7.1"
+
+debug@^2.3.3:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.0.tgz#bc596bcabe7617f11d9fa15361eded5608b8499b"
+  dependencies:
+    ms "0.7.2"
 
 decamelize@^1.0.0, decamelize@^1.1.1, decamelize@^1.1.2:
   version "1.2.0"
@@ -2954,6 +2964,12 @@ sax@~1.2.1:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.2.tgz#fd8631a23bc7826bef5d871bdb87378c95647828"
 
+script-ext-html-webpack-plugin@^1.7.1:
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/script-ext-html-webpack-plugin/-/script-ext-html-webpack-plugin-1.7.1.tgz#ae9c0e26d7767d4aa793c76e3550344ec08b6d10"
+  dependencies:
+    debug "^2.3.3"
+
 select-hose@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/select-hose/-/select-hose-2.0.0.tgz#625d8658f865af43ec962bfc376a37359a4994ca"
@@ -3485,6 +3501,10 @@ wbuf@^1.1.0, wbuf@^1.4.0:
   resolved "https://registry.yarnpkg.com/wbuf/-/wbuf-1.7.2.tgz#d697b99f1f59512df2751be42769c1580b5801fe"
   dependencies:
     minimalistic-assert "^1.0.0"
+
+webfontloader@^1.6.27:
+  version "1.6.27"
+  resolved "https://registry.yarnpkg.com/webfontloader/-/webfontloader-1.6.27.tgz#c3899649b0653aa57d0a23388f82409e0df224ba"
 
 webpack-dev-middleware@^1.9.0:
   version "1.10.0"
