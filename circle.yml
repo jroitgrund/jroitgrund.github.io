@@ -15,7 +15,7 @@ test:
     - yarn build
 
 deployment:
-  develop:
-    branch: master
+  github-pages:
+    branch: develop
     commands:
       - ./deploy-github.sh
