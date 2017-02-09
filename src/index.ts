@@ -1,4 +1,5 @@
 require("./style");
+require("./fonts");
 
 const HACK_THE_PLANET_LABEL = "h4cktheplanet!";
 
@@ -10,7 +11,7 @@ hackThePlanet.innerText = HACK_THE_PLANET_LABEL;
 
 hackThePlanet.onclick = () => {
     if (hacked) {
-        body.className = body.className.replace( /(?:^|\s)hacked(?!\S)/g , '' );
+        body.className = body.className.replace( /(?:^|\s)hacked(?!\S)/g , "");
         hacked = false;
         hackThePlanet.innerText = HACK_THE_PLANET_LABEL;
     } else {
@@ -18,6 +19,6 @@ hackThePlanet.onclick = () => {
         hackThePlanet.innerText = "unh4cktheplanet!";
         hacked = true;
     }
-}
+};
 
 document.getElementById("header").appendChild(hackThePlanet);
