@@ -2,6 +2,7 @@
 
 $line-height: 1.15em;
 $horizontal-padding: 1rem;
+$header-font-size: 1;
 
 body {
   font-family: sans-serif;
@@ -33,12 +34,12 @@ header {
   padding: 0 $horizontal-padding;
   margin-top: $horizontal-padding;
 
-  font-size: 2em;
+  font-size: $header-font-size * 1em;
 }
 
 .body {
   position: fixed;
-  top: $line-height * 2 + 1em;
+  top: $line-height * $header-font-size + 1em;
   bottom: 0;
   left: 0;
   overflow-y: auto;
@@ -118,4 +119,14 @@ section {
 
 .hacktheplanet {
   cursor: pointer;
+}
+
+@media(max-width: 450px) {
+  body {
+    top: $line-height * $header-font-size / 2 + 1em;
+  }
+
+  header {
+    font-size: $header-font-size * 0.5em;
+  }
 }
