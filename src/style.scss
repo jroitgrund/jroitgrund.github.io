@@ -29,12 +29,10 @@ header {
   right: 0;
 
   height: $line-height;
-  max-width: 34em;
+  width: 100%;
   box-sizing: border-box;
   padding: 0 $horizontal-padding;
   margin-top: $horizontal-padding;
-  margin-left: auto;
-  margin-right: auto;
 
   font-size: $header-font-size * 1em;
 }
