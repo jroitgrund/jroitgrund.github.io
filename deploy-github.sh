@@ -14,4 +14,4 @@ yarn install
 yarn run build
 git add .
 git commit -m "Deploy to GitHub pages"
-git push
+git push -f
