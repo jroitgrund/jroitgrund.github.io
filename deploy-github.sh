@@ -6,6 +6,7 @@ cd "$(dirname "$0")"
 git config --global user.email bot@circleci.com > /dev/null 2>&1
 git config --global user.name CircleCI > /dev/null 2>&1
 
+git reset --hard HEAD
 git checkout master
 git merge develop
 yarn install
