@@ -49,15 +49,18 @@ module.exports = {
                     fallback: "style-loader"
                 }),
             },
-            // {
-            //     test: /fonts\.scss$/,
-            //     use: ["style-loader", "css-loader"],
-            // },
             {
                 test: /\.ts$/,
                 use: ["ts-loader", "tslint-loader"]
-            }
-        ]
+            },
+            {
+                test: /\.(jpg|png)$/,
+                loader: 'file-loader',
+                options: {
+                    name: '[path][name].[hash].[ext]',
+                },
+            },
+        ],
     },
     plugins: [
         new HtmlWebpackPlugin({
