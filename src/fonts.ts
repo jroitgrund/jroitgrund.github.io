@@ -1,7 +1,7 @@
-  const WebFont = require("webfontloader");
+const WebFont = require("webfontloader");
 
-  WebFont.load({
-    google: {
-      families: ["Open Sans", "Inconsolata"]
-    }
-  });
+WebFont.load({
+  google: {
+    families: ["Open Sans", "Inconsolata"],
+  },
+});
